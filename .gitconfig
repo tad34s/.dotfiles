@@ -1,5 +1,12 @@
-[credential]
-	helper = store
 [user]
-	email = tadeas.baca@email.cz
-	name = Tadeáš
+	name = Tadeáš Báča
+	email = bacatade@fit.cvut.cz
+[core]
+	editor = vim
+	autocrlf = input
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	ll = log --oneline --graph --all --decorate
