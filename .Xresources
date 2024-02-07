@@ -1,0 +1,61 @@
+
+
+
+# XTerm
+XTerm.termName: xterm
+## Font
+xterm*faceName: terminus-12
+URxvt*font:     terminus-12
+URxvt*boldFont: terminus-12
+## For utf-8
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+## for alt
+XTerm.vt100.metaSendsEscape: true
+## for backspace
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+## scrollbar
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.width: 8
+## Urgency
+XTerm.vt100.bellIsUrgent: true
+
+# Colors
+*background: #1A1E2A
+*foreground: #FFFFFF
+
+! black
+*color0: #1D2430
+*color8: #1D2430
+
+! red
+*color1: #FA5EAD
+*color9: #FA5EAD
+
+! green
+*color2: #00FBAD
+*color10: #00FBAD
+
+! yellow
+*color3: #FFDF5F
+*color11: #FFDF5F
+
+! blue
+*color4: #5EADFC
+*color12: #5EADFC
+
+! magenta
+*color5: #FA5EAD
+*color13: #FA5EAD
+
+! cyan
+*color6: #242D42
+*color14: #6A6F87
+
+! white
+*color7: #FFFFFF
+*color15: #EFF1F5
+
+
+

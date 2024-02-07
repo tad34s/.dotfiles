@@ -13,7 +13,45 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+
+# font pango:monospace 8
+
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font pango:NotoMono Nerd Font Mono 10
+font pango: Noto Sans 0
+
+# Set inner/outer gaps
+gaps inner 15
+gaps outer 0
+gaps top 0
+gaps bottom 0
+# workspace $ws5 gaps inner 0
+
+for_window [class   = "^.*"] border pixel 0
+for_window [title   = "^.*"] border pixel 0
+
+# border_radius 3
+# smart_borders on
+# smart_gaps on
+
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #ffffff
+set_from_resource $bg i3wm.color0 #1a1e2a
+set_from_resource $ac i3wm.color8 #222734
+
+
+# class                 border  backgr. text indicator child_border
+client.focused          $ac     $ac     $fg  $ac       $ac
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -21,18 +59,7 @@ font pango:monospace 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex --autostart --environment i3
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# Hotkeys
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -55,7 +82,6 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -185,10 +211,6 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
-
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -196,15 +218,32 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Wallpaper
 exec_always feh --bg-scale /home/tadeas/Pictures/wallpaper/wp.jpg
 
+# ROFI SCRIPTS:
+
+# Rofi drun menu
+bindsym $mod+d exec "rofi -show run" 
+# Power menu in rofi
+bindsym $mod+ctrl+p exec rofi -show power-menu -modi power-menu:"~/.config/rofi/scripts/powermenu.sh" 
+# Web search
+bindsym $mod+ctrl+w exec vivaldi-stable
+
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Stuff
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+
+# Shortcut to open dotfiles workspace
+# bindsym $mod+c exec --no-startup-id sh -c "codium -n ~/Documents/Workspaces/mydotfiles_workspace.code-workspace"
+
+# Programs
+exec_always killall picom ; picom -b
 exec --no-startup-id picom -CGb
-
-gaps inner 10
-gaps outer 5
-smart_gaps on
-
-
 exec --no-startup-id volumeicon
 
 
