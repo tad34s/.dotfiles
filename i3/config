@@ -113,10 +113,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Ctrl+h split h
+bindsym $mod+n split h
 
 # split in vertical orientation
-bindsym $mod+Ctrl+v split v
+bindsym $mod+m split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -233,7 +233,8 @@ bindsym $mod+ctrl+p exec rofi -show power-menu -modi power-menu:"~/.config/rofi/
 bindsym Print exec flameshot gui
 # Web search
 bindsym $mod+ctrl+w exec vivaldi-stable
-
+# Music
+bindsym $mod+ctrl+m exec xterm -e ncspot
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

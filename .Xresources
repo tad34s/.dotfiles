@@ -26,38 +26,45 @@ XTerm.vt100.bellIsUrgent: true
 ! Colors
 ! special
 *.foreground:   #d4dbff
-*.background:   #0e1119
+*.background:   #121212
 *.cursorColor:  #d4dbff
 
 ! black
 *.color0:       #282a2e
 *.color8:       #444950
-
+*.color16:      #707880
 ! red
 *.color1:       #d54c73
 *.color9:       #df4e75
-
+*.color17:       #444950
+!
 ! green
 *.color2:       #78dc8d
 *.color10:      #7bdb9a
+*.color18:       #444950
 
 ! yellow
 *.color3:       #fcf291
 *.color11:      #f5ec9a
+*.color19:       #444950
 
 ! blue
 *.color4:       #5689e8
 *.color12:      #719bec
+*.color20:       #444950
 
 ! magenta
 *.color5:       #837dd7
 *.color13:      #908cdb
+*.color21:       #444950
 
 ! cyan
 *.color6:       #65dedc
 *.color14:      #72e7e5
+*.color22:       #444950
 
 ! white
 *.color7:       #e4e7ff
 *.color15:      #f4f7ff
+*.color23:       #444950
 

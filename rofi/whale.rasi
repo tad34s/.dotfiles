@@ -11,15 +11,15 @@ configuration {
   font: "Noto Sans 12";
 
   drun {
-    display-name: "";
+    display-name: "rofi";
   }
 
   run {
-    display-name: "";
+    display-name: "::";
   }
 
   window {
-    display-name: "";
+    display-name: "rofi";
   }
 
   timeout {
