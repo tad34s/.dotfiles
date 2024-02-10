@@ -1,0 +1,9 @@
+
+# GIT
+\.git
+\.gitignore
+
+^/README.*
+
+# Wallpapers
+\wallpapers
