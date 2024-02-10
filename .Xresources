@@ -33,11 +33,12 @@ XTerm.vt100.bellIsUrgent: true
 *.color0:       #282a2e
 *.color8:       #444950
 *.color16:      #707880
-! red
-*.color1:       #d54c73
-*.color9:       #df4e75
-*.color17:       #444950
-!
+ 
+! magenta
+*.color1:       #D54C73
+*.color9:      	#908cdb
+*.color17:      #3837dd
+
 ! green
 *.color2:       #78dc8d
 *.color10:      #7bdb9a
@@ -49,15 +50,14 @@ XTerm.vt100.bellIsUrgent: true
 *.color19:       #444950
 
 ! blue
-*.color4:       #5689e8
-*.color12:      #719bec
-*.color20:       #444950
+*.color4:       #486c9a
+*.color12:      #31466b
 
-! magenta
-*.color5:       #837dd7
-*.color13:      #908cdb
-*.color21:       #444950
-
+! red
+*.color5:       #FC3E3E 
+*.color13:      #A54242
+*.color21:      #CC6666
+!
 ! cyan
 *.color6:       #65dedc
 *.color14:      #72e7e5
@@ -67,4 +67,3 @@ XTerm.vt100.bellIsUrgent: true
 *.color7:       #e4e7ff
 *.color15:      #f4f7ff
 *.color23:       #444950
-
