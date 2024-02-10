@@ -4,10 +4,10 @@
 ! XTerm
 XTerm.termName: xterm
 !! Font
-xterm*faceName: NotoMono-Regular 
-xterm*faceSize: 12
-URxvt*font:     NotoMono-Regular
-URxvt*boldFont: NotoMono-Regular
+xterm*faceName: NotoMono-Regular;1 
+xterm*faceSize: 8 
+URxvt*font:     NotoMono-Regular;1
+URxvt*boldFont: NotoMono-Regular;1
 
 !! For utf-8
 XTerm.vt100.locale: false
