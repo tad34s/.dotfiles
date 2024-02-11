@@ -222,7 +222,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+u exec setxkbmap -layout us
 bindsym $mod+i exec  setxkbmap -layout cz -variant qwerty
 # Wallpaper
-exec_always feh --bg-scale /home/tadeas/Pictures/wallpaper/wp.jpg
+exec_always feh --bg-scale /home/tadeas/.dotfiles/wallpapers/wp.jpg
 
 # ROFI SCRIPTS:
 

@@ -4,10 +4,11 @@
 ! XTerm
 XTerm.termName: xterm
 !! Font
-xterm*faceName: NotoMono-Regular;1 
+xterm*faceName: terminus 
 xterm*faceSize: 8 
-URxvt*font:     NotoMono-Regular;1
-URxvt*boldFont: NotoMono-Regular;1
+xterm*letterSpacing: 0
+URxvt*font:     terminus
+URxvt*boldFont: terminus
 
 !! For utf-8
 XTerm.vt100.locale: false
