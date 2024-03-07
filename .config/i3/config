@@ -9,6 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+exec --no-startup-id xrdb -merge ~/.Xresources
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -175,7 +177,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+Shift+y	resize shrink width 10 px or 10 ppt
@@ -213,29 +215,32 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play
+bindsym XF86AudioPause exec --no-startup-id playerctl pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Keybords
-bindsym $mod+u exec setxkbmap -layout us
-bindsym $mod+i exec  setxkbmap -layout cz -variant qwerty
+bindsym $mod+u exec --no-startup-id setxkbmap -layout us
+bindsym $mod+i exec --no-startup-id setxkbmap -layout cz -variant qwerty
 # Wallpaper
-exec_always feh --bg-scale /home/tadeas/.dotfiles/wallpapers/wp.jpg
+exec_always --no-startup-id feh --bg-scale /home/tadeas/.dotfiles/wallpapers/wp.jpg
 
 # ROFI SCRIPTS:
 
 # Rofi drun menu
-bindsym $mod+d exec "rofi -show run" 
+#bindsym $mod+d exec --no-startup-id rofi -show -show-icons run -icon-theme "Kora" -show-icons
+
+bindsym $mod+d exec ~/.config/rofi/scripts/launcher_t2
+
 # Power menu in rofi
-bindsym $mod+ctrl+p exec rofi -show power-menu -modi power-menu:"~/.config/rofi/scripts/powermenu.sh" 
+bindsym $mod+ctrl+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1
 #Screeenshot
 bindsym Print exec flameshot gui
 # Web search
-bindsym $mod+ctrl+w exec vivaldi-stable
+bindsym $mod+ctrl+w exec --no-startup-id vivaldi-stable
 # Music
-bindsym $mod+ctrl+m exec xterm -e ncspot
+bindsym $mod+ctrl+m exec --no-startup-id xterm -e ncspot
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -249,9 +254,10 @@ exec --no-startup-id nm-applet
 # bindsym $mod+c exec --no-startup-id sh -c "codium -n ~/Documents/Workspaces/mydotfiles_workspace.code-workspace"
 
 # Programs
-exec_always killall picom ; picom -b
+exec_always --no-startup-id killall picom ; picom -b
 exec --no-startup-id picom -CGb
 exec --no-startup-id volumeicon
+exec_always --no-startup-id otd-daemon
 
 
 
