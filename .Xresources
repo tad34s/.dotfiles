@@ -51,7 +51,7 @@ XTerm.vt100.bellIsUrgent: true
 
 ! blue
 *.color4:       #486c9a
-*.color12:      #31466b
+*.color12:      #7da0db
 
 ! red
 *.color5:       #FC3E3E 
