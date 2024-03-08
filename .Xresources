@@ -1,6 +1,7 @@
 
 
 
+Xft.dpi: 170
 ! XTerm
 XTerm.termName: xterm
 !! Font
