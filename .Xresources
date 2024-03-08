@@ -1,15 +1,16 @@
 
 
 
-Xft.dpi: 170
+Xft.dpi: 170 
 ! XTerm
 XTerm.termName: xterm
 !! Font
-xterm*faceName: terminus 
-xterm*faceSize: 8 
+xterm*faceName: Noto-Sans-Mono 
+xterm*faceSize: 8
 xterm*letterSpacing: 0
-URxvt*font:     terminus
-URxvt*boldFont: terminus
+URxvt*font:     Noto-Sans-Mono 
+URxvt*boldFont: Noto-Sans-Mono-Bold  
+
 
 !! For utf-8
 XTerm.vt100.locale: false

@@ -10,8 +10,8 @@ source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
 # Brightness Info
-backlight="$(printf "%.0f\n" `light -G`)"
-card="`light -L | grep 'backlight' | head -n1 | cut -d'/' -f3`"
+backlight="$(($(brightnessctl g)*100/$(brightnessctl m)))"
+card=""
 
 if [[ $backlight -ge 0 ]] && [[ $backlight -le 29 ]]; then
     level="Low"
@@ -25,7 +25,7 @@ fi
 
 # Theme Elements
 prompt="${backlight}%"
-mesg="Device: ${card}, Level: $level"
+mesg="${card}Level: $level"
 
 if [[ "$theme" == *'type-1'* ]]; then
 	list_col='1'
@@ -48,15 +48,16 @@ fi
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
-	option_1=" Increase"
-	option_2=" Optimal"
-	option_3=" Decrease"
-	option_4=" Settings"
+	option_1=" Semi High"
+	option_2=" Semi Low"
+	option_3=" Max"
+	option_4=" Min"
 else
+
 	option_1=""
-	option_2=""
-	option_3=""
-	option_4=""
+	option_2=""
+	option_3=""
+	option_4=""
 fi
 
 # Rofi CMD
@@ -79,18 +80,19 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		light -A 5
+		brightnessctl set 65%
 	elif [[ "$1" == '--opt2' ]]; then
-		light -S 25
+		brightnessctl set 30%
 	elif [[ "$1" == '--opt3' ]]; then
-		light -U 5
+		brightnessctl set 100%
 	elif [[ "$1" == '--opt4' ]]; then
-		xfce4-power-manager-settings
+		brightnessctl set 0%
 	fi
 }
 
 # Actions
 chosen="$(run_rofi)"
+echo $chosen
 case ${chosen} in
     $option_1)
 		run_cmd --opt1
