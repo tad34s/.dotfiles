@@ -243,7 +243,7 @@ bindsym $mod+ctrl+w exec --no-startup-id vivaldi-stable
 bindsym $mod+ctrl+m exec --no-startup-id xterm -e ncspot
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --material
 
 # Stuff
 exec --no-startup-id dex --autostart --environment i3
