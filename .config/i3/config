@@ -237,6 +237,8 @@ bindsym $mod+d exec ~/.config/rofi/scripts/launcher_t2
 bindsym $mod+ctrl+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1
 #Screeenshot
 bindsym Print exec flameshot gui
+bindsym ctrl+Print exec flameshot full --clipboard --path ~/Pictures/screenshots
+
 # Web search
 bindsym $mod+ctrl+w exec --no-startup-id vivaldi-stable
 # Music
