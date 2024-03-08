@@ -11,11 +11,12 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu/type-1"
-theme='style-1'
+theme='style-5'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
-host=`hostname`
+# light="`echo $(($(brightnessctl g)*100/$(brightnessctl m)))%`"
+host=`whoami`
 
 # Options
 shutdown=' Shutdown'
@@ -27,6 +28,8 @@ yes=' Yes'
 no=' No'
 
 # Rofi CMD
+#
+		#-mesg "Uptime: $uptime   |   Brightness: $light" \
 rofi_cmd() {
 	rofi -dmenu \
 		-p "$host" \
@@ -44,7 +47,7 @@ confirm_cmd() {
 		-dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/${theme}.rasi
+%		-theme ${dir}/${theme}.rasi
 }
 
 # Ask for confirmation
