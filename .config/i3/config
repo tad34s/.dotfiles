@@ -33,8 +33,8 @@ gaps top 0
 gaps bottom 0
 # workspace $ws5 gaps inner 0
 
-for_window [class   = "^.*"] border pixel 0
-for_window [title   = "^.*"] border pixel 0
+for_window [class   = "^.*"] border pixel 1
+for_window [title   = "^.*"] border pixel 1
 
 # border_radius 3
 # smart_borders on

@@ -6,7 +6,7 @@ Xft.dpi: 170
 XTerm.termName: xterm
 !! Font
 xterm*faceName: Noto-Sans-Mono 
-xterm*faceSize: 8
+xterm*faceSize: 9
 xterm*letterSpacing: 0
 URxvt*font:     Noto-Sans-Mono 
 URxvt*boldFont: Noto-Sans-Mono-Bold  

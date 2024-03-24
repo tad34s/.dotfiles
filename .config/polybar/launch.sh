@@ -18,6 +18,9 @@ launch_bar() {
 		bash "$dir"/pwidgets/launch.sh --main
 	else
 		polybar -q main -c "$dir/$style/config.ini" &	
+#		for m in $(polybar --list-monitors | cut -d":" -f1); do
+#			MONITOR=$m polybar --relaod main -c "$dir/$style/config.ini" &
+#		done;
 	fi
 }
 
