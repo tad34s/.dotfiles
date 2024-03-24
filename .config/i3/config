@@ -29,8 +29,8 @@ gaps top 0
 gaps bottom 0
 # workspace $ws5 gaps inner 0
 
-for_window [class   = "^.*"] border pixel 0
-for_window [title   = "^.*"] border pixel 0
+for_window [class   = "^.*"] border pixel 2
+for_window [title   = "^.*"] border pixel 2
 
 # border_radius 3
 # smart_borders on
@@ -224,14 +224,14 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+u exec --no-startup-id setxkbmap -layout us
 bindsym $mod+i exec --no-startup-id setxkbmap -layout cz -variant qwerty
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/tadeas/Pictures/wallpapers/wp
+exec_always --no-startup-id feh --bg-scale /home/tadeas/Pictures/wallpapers/using/wp
 
 # ROFI SCRIPTS:
 
 # Rofi drun menu
 #bindsym $mod+d exec --no-startup-id rofi -show -show-icons run -icon-theme "Kora" -show-icons
 
-bindsym $mod+d exec ~/.config/rofi/scripts/launcher_t2
+bindsym $mod+d exec ~/.config/rofi/scripts/launcher_t1
 
 # Power menu in rofi
 bindsym $mod+ctrl+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1
