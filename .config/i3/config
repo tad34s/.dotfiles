@@ -56,9 +56,9 @@ client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
 client.background       $bg
 
+default_border pixel 0
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -126,9 +126,9 @@ bindsym $mod+t split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -183,7 +183,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+ctrl+Shift+e exec  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+Shift+y	resize shrink width 10 px or 10 ppt
@@ -245,9 +245,9 @@ bindsym Print exec flameshot gui
 bindsym ctrl+Print exec flameshot full --clipboard --path ~/Pictures/screenshots
 
 # Web search
-bindsym $mod+ctrl+w exec --no-startup-id vivaldi-stable
+bindsym $mod+w exec --no-startup-id vivaldi-stable
 # Music
-bindsym $mod+ctrl+m exec --no-startup-id xterm -e ncspot
+bindsym $mod+m exec --no-startup-id xterm -e ncspot
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --material
