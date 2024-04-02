@@ -45,12 +45,10 @@ XTerm.vt100.bellIsUrgent: true
 ! green
 *.color2:       #78dc8d
 *.color10:      #7bdb9a
-*.color18:       #444950
 
 ! yellow
 *.color3:       #fcf291
 *.color11:      #f5ec9a
-*.color19:       #444950
 
 ! blue
 *.color4:       #486c9a
@@ -64,9 +62,8 @@ XTerm.vt100.bellIsUrgent: true
 ! cyan
 *.color6:       #65dedc
 *.color14:      #72e7e5
-*.color22:       #444950
 
 ! white
-*.color7:       #e4e7ff
-*.color15:      #f4f7ff
-*.color23:       #444950
+*.color7:       #f4f7ff
+*.color15:      #8F8F8F
+*.color23:      #70737C
