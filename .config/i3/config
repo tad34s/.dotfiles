@@ -235,7 +235,7 @@ exec_always --no-startup-id feh --bg-scale /home/tadeas/Pictures/wallpapers/usin
 # ROFI SCRIPTS:
 
 # Rofi drun menu
-bindsym $mod+d exec ~/.config/rofi/scripts/launcher_t1
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher_t1
 # Brightness rofi
 bindsym $mod+ctrl+b exec --no-startup-id ~/.config/rofi/applets/bin/brightness.sh
 # Power menu in rofi
