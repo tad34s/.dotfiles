@@ -104,6 +104,9 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 
+eval "$(zoxide init zsh)"
+
+
 export EDITOR=nvim
 
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
@@ -121,4 +124,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
 
