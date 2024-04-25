@@ -261,10 +261,12 @@ exec --no-startup-id nm-applet
 # bindsym $mod+c exec --no-startup-id sh -c "codium -n ~/Documents/Workspaces/mydotfiles_workspace.code-workspace"
 
 # Programs
-exec_always --no-startup-id killall picom ; picom -b
-exec --no-startup-id picom -CGb
+exec_always --no-startup-id killall picom 
+# ; picom -b
+# exec --no-startup-id picom -CGb
 exec --no-startup-id volumeicon
 exec_always --no-startup-id otd-daemon
+exec_always --no-startup-id xfce4-power-manager
 
 
 
