@@ -106,10 +106,16 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 
+alias ra='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+alias up="cd .."
+
+alias nv="nvim"
 
 export EDITOR=nvim
 
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+#alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/tadeas/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

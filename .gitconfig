@@ -10,3 +10,12 @@
 	co = checkout
 	br = branch
 	ll = log --oneline --graph --all --decorate
+
+# ~/.gitconfig
+[merge]
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
