@@ -43,7 +43,7 @@ for_window [title   = "^.*"] border pixel 1
 # it fails to get colors from Xresources.
 set_from_resource $fg i3wm.color7 #ffffff
 set_from_resource $bg i3wm.color0 #1a1e2a
-set_from_resource $ac i3wm.color12 #222734
+set_from_resource $ac i3wm.color16 #222734
 
 
 # class                 border  backgr. text indicator child_border

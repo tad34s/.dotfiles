@@ -2,9 +2,10 @@
 	name = Tadeáš Báča
 	email = bacatade@fit.cvut.cz
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [alias]
+	coma = !git add ./ && git commit
 	st = status
 	ci = commit
 	co = checkout
