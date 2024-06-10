@@ -16,6 +16,7 @@ theme='style-1'
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
+updates="`cat ~/.config/rofi/scripts/n_updates.tmp`"
 
 # Options
 shutdown=' Shutdown'
@@ -29,7 +30,7 @@ no=' No'
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p "$host" \
+		-p "$host Number of updates: $updates" \
 		-mesg "Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi
 }

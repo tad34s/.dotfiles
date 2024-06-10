@@ -114,6 +114,9 @@ alias nv="nvim"
 
 export EDITOR=nvim
 
+# fix for ranger
+export TERM=xterm-256color
+
 #alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 # >>> conda initialize >>>
