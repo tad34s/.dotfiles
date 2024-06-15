@@ -112,6 +112,8 @@ alias up="cd .."
 
 alias nv="nvim"
 
+alias chez="chezmoi"
+
 export EDITOR=nvim
 
 # fix for ranger
