@@ -11,5 +11,10 @@ done
 # Launch bar1 and bar2
 #echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 #polybar main 2>&1 | tee -a /tmp/polybar1.log & disown
+=======
+dir="$HOME/.config/polybar"
+themes=(`ls --hide="launch.sh" $dir`)
 
-echo "Bars launched"
+launch_bar() {
+	# Terminate already running bar instances
+	killall -q polybar

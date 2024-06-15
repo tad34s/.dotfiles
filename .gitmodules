@@ -1,6 +1,7 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:tad34s/nvim.git
+	branch = master
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:tad34s/nvim.git

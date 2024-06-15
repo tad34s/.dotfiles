@@ -5,6 +5,7 @@
 
 # Comments and blank lines are allowed.
 
+# GIT
 \.git
 \.gitignore
 
@@ -17,3 +18,10 @@
 
 
 change_wallpaper.sh
+
+
+^/README.*
+
+/setup
+# Wallpapers
+# \wallpapers

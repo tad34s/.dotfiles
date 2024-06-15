@@ -11,6 +11,11 @@
 
 exec --no-startup-id xrdb -merge ~/.Xresources
 
+# NOTEBOOk_TEMP
+exec --no-startup-id xrandr --output DP-2 --auto --left-of eDP-1
+
+exec --no-startup-id xrandr --output DP-1 --auto --left-of eDP-1
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -52,7 +57,6 @@ client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
 client.background       $bg
 
 default_border pixel 0
@@ -63,6 +67,8 @@ default_border pixel 0
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 # Hotkeys
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -196,7 +202,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
+<<<<<<< HEAD
 bindsym $mod+ctrl+Shift+e exec  --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+=======
+bindsym $mod+ctrl+Shift+e exec  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+>>>>>>> origin/work_laptop
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+Shift+y	resize shrink width 10 px or 10 ppt
@@ -243,26 +253,46 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+u exec --no-startup-id setxkbmap -layout us
 bindsym $mod+i exec --no-startup-id setxkbmap -layout cz -variant qwerty
 # Wallpaper
+<<<<<<< HEAD
  exec_always --no-startup-id feh --bg-scale /home/tadeas/Pictures/wallpapers/using/wp
+=======
+exec_always --no-startup-id feh --bg-scale /home/tadeas/Pictures/wallpapers/using/wp
+>>>>>>> origin/work_laptop
 
 # ROFI SCRIPTS:
 
 # Rofi drun menu
+<<<<<<< HEAD
 #bindsym $mod+d exec --no-startup-id rofi -show -show-icons run -icon-theme "Kora" -show-icons
 
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher_t1
 
+=======
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher_t1
+# Brightness rofi
+bindsym $mod+ctrl+b exec --no-startup-id ~/.config/rofi/applets/bin/brightness.sh
+>>>>>>> origin/work_laptop
 # Power menu in rofi
 bindsym $mod+ctrl+p exec --no-startup-id paru -Sy --noconfirm --quiet & ~/.config/rofi/scripts/powermenu_t1
 #Screeenshot
+<<<<<<< HEAD
 bindsym Print exec --no-startup-id flameshot gui
 # Web search
 bindsym $mod+w exec --no-startup-id vivaldi-stable
 # Music
 bindsym $mod+m workspace $ws8; exec --no-startup-id xterm -e ncspot
+=======
+bindsym Print exec flameshot gui
+bindsym ctrl+Print exec flameshot full --clipboard --path ~/Pictures/screenshots
+
+# Web search
+bindsym $mod+w exec --no-startup-id vivaldi-stable
+# Music
+bindsym $mod+m exec --no-startup-id xterm -e ncspot
+>>>>>>> origin/work_laptop
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --material
 
 # Stuff
 exec --no-startup-id dex --autostart --environment i3
@@ -273,11 +303,16 @@ exec --no-startup-id nm-applet
 # bindsym $mod+c exec --no-startup-id sh -c "codium -n ~/Documents/Workspaces/mydotfiles_workspace.code-workspace"
 
 # Programs
-exec_always --no-startup-id killall picom ; picom -b
-exec --no-startup-id picom -CGb
+exec_always --no-startup-id killall picom 
+# ; picom -b
+# exec --no-startup-id picom -CGb
 exec --no-startup-id volumeicon
 exec_always --no-startup-id otd-daemon
+<<<<<<< HEAD
 # exec --no-startup-id ~/.config/rofi/scripts/checkupdates.sh
+=======
+exec_always --no-startup-id xfce4-power-manager
+>>>>>>> origin/work_laptop
 
 
 
