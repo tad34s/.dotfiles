@@ -149,6 +149,14 @@ set $ws8 "8 "
 set $ws9 "9 "
 set $ws10 "ML"
 
+workspace $ws1 output HDMI-0
+workspace $ws2 output VGA-0
+workspace $ws7 output HDMI-0
+workspace $ws8 output VGA-0
+workspace $ws9 output VGA-0
+workspace $ws10 output HDMI-0
+
+
 assign [class="(?i)vivaldi"] $ws2
 assign [class="(?i)discord"] $ws9
 assign [class="(?i)Signal"] $ws9
@@ -251,7 +259,7 @@ bindsym Print exec --no-startup-id flameshot gui
 # Web search
 bindsym $mod+w exec --no-startup-id vivaldi-stable
 # Music
-bindsym $mod+m exec --no-startup-id xterm -e ncspot
+bindsym $mod+m workspace $ws8; exec --no-startup-id xterm -e ncspot
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -269,7 +277,7 @@ exec_always --no-startup-id killall picom ; picom -b
 exec --no-startup-id picom -CGb
 exec --no-startup-id volumeicon
 exec_always --no-startup-id otd-daemon
-exec --no-startup-id ~/.config/rofi/scripts/checkupdates.sh &
+# exec --no-startup-id ~/.config/rofi/scripts/checkupdates.sh
 
 
 
